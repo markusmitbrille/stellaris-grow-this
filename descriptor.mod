@@ -4,7 +4,7 @@ tags={
 	"Economy"
 	"Gameplay"
 }
-name="Grow This"
+name="Grow This: Migration"
 picture="thumbnail.png"
 supported_version="3.0.*"
 path="mod/stellaris-grow-this"
