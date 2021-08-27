@@ -1,0 +1,33 @@
+NPop = {
+	##########
+	# GROWTH #
+	##########
+	BASE_POP_GROWTH = 1	# Base growth rate of pops
+	LOGISTIC_POP_GROWTH_R = 0.25	# Logistic Pop Growth Constant r
+	LOGISTIC_POP_GROWTH_FLOOR = 0.5	# Logistic Pop Growth won't lower growth to less than this percent.
+	# LOGISTIC_POP_GROWTH_MIN_POPS = 5 # Treat small colonies as having this many pops to avoid the very bottom of the curve
+	LOGISTIC_POP_GROWTH_LOWER_THRESHOLD = 0	# Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity
+	# MAX_CARRYING_CAPACITY = 500 # Logistic Carrying Capacity Cap (so modders have access to this value in case they make a planet with infinite districts or something like that)
+	# MAX_NEW_COLONIES_SCALE = 2 # At this ratio of new to old colonies, no further scaling of migration
+	# REQUIRED_POP_GROWTH = 100 # Required growth to make a new pop
+	################
+	# OVERCROWDING #
+	################
+	OVERCROWDING_NO_GROWTH_THRESHOLD = 1	# At this amount of overcrowding (required housing / actual housing), growth stops entirely
+	OVERCROWDING_DECLINE_THRESHOLD = 1.15	# At this amount of overcrowding (required housing / actual housing), pops start declining
+	OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH = 0	# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in
+	# MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10 # No more than this amount of pops can grow, assemble or decline in the same month
+	#############
+	# MIGRATION #
+	#############
+	# MAX_EMIGRATION_PUSH = 100
+	MAX_GROWTH_FROM_IMMIGRATION = 100
+	# MAX_GROWTH_PENALTY_FROM_EMIGRATION = 0.95 # Fraction of base monthly growth
+}
+
+NGameplay = {
+	LOGISTIC_CEILING_DEFAULT = 50
+	LOGISTIC_CEILING_MIN = 1
+	LOGISTIC_CEILING_MAX = 50
+	LOGISTIC_CEILING_SLIDER_INTERVAL = 1
+}
