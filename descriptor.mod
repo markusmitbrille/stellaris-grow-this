@@ -7,3 +7,4 @@ tags={
 name="Grow This: Migration"
 picture="thumbnail.png"
 supported_version="3.1.*"
+path="mod/stellaris-grow-this"
