@@ -4,17 +4,17 @@ NPop = {
 	##########
 
 	# Base growth rate of pops (vanilla = 3)
-	BASE_POP_GROWTH = 1
+	BASE_POP_GROWTH = 0.2
 	# Logistic Pop Growth Constant r (vanilla = 0.125)
-	LOGISTIC_POP_GROWTH_R = 0.25
+	LOGISTIC_POP_GROWTH_R = 1.00
 	# Logistic Pop Growth won't lower growth to less than this percent (vanilla = 0.1)
-	LOGISTIC_POP_GROWTH_FLOOR = 0.5
+	LOGISTIC_POP_GROWTH_FLOOR = 1.00
 	# Treat small colonies as having this many pops to avoid the very bottom of the curve (vanilla = 5)
-	LOGISTIC_POP_GROWTH_MIN_POPS = 5
+	LOGISTIC_POP_GROWTH_MIN_POPS = 1
 	# Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity (vanilla = 0.5)
 	LOGISTIC_POP_GROWTH_LOWER_THRESHOLD = 0
 	# Logistic Carrying Capacity Cap (vanilla = 500)
-	MAX_CARRYING_CAPACITY = 500
+	MAX_CARRYING_CAPACITY = 1000
 	# At this ratio of new to old colonies, no further scaling of migration (vanilla = 2)
 	MAX_NEW_COLONIES_SCALE = 2
 	# Required growth to make a new pop (vanilla = 100)
@@ -25,11 +25,11 @@ NPop = {
 	################
 
 	# At this amount of overcrowding (required housing / actual housing), growth stops entirely (vanilla = 1.15)
-	OVERCROWDING_NO_GROWTH_THRESHOLD = 1.15
+	OVERCROWDING_NO_GROWTH_THRESHOLD = 1.00
 	# At this amount of overcrowding (required housing / actual housing), pops start declining (vanilla = 1.25)
-	OVERCROWDING_DECLINE_THRESHOLD = 1.25
+	OVERCROWDING_DECLINE_THRESHOLD = 1.00
 	# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in (vanilla = 5)
-	OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH = 5
+	OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH = 0
 	# No more than this amount of pops can grow, assemble or decline in the same month (vanilla = 10)
 	MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10
 
@@ -46,8 +46,8 @@ NPop = {
 }
 
 NGameplay = {
-	LOGISTIC_CEILING_DEFAULT = 50
+	LOGISTIC_CEILING_DEFAULT = 200
 	LOGISTIC_CEILING_MIN = 1
-	LOGISTIC_CEILING_MAX = 50
-	LOGISTIC_CEILING_SLIDER_INTERVAL = 1
+	LOGISTIC_CEILING_MAX = 200
+	LOGISTIC_CEILING_SLIDER_INTERVAL = 25
 }
