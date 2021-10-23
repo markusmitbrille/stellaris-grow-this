@@ -1,0 +1,14 @@
+# applied when wealth > 10, multiplied with every point of wealtch above 0, up to 100
+gt_mod_wealthy = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_city_ruins.dds"
+	icon_frame = 1
+	planet_immigration_pull_add = 1
+	pop_growth_speed_reduction = 0.01
+}
+
+# applied when wealth < 10, mulitplied with every point of wealth below 0, down to -100
+gt_mod_poor = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_city_ruins.dds"
+	icon_frame = 3
+	planet_emigration_push_add = -1
+}

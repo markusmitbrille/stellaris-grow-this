@@ -1,0 +1,13 @@
+# this = pop
+gt_pop_can_have_wealth = {
+  OR = {
+    is_pop_category = worker
+    is_pop_category = specialist
+    is_pop_category = ruler
+  }
+}
+
+# this = country
+gt_country_can_have_wealth = {
+  is_country_type = default
+}

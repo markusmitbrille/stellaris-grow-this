@@ -1,0 +1,101 @@
+namespace = gt
+
+# fire remove events
+country_event = {
+	id = gt.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		gt_country_can_have_wealth = no
+	}
+
+	immediate = {
+		every_owned_planet = {
+      gt_remove_planet_wealth = yes
+		}
+	}
+}
+
+# remove wealth from invalid planet
+planet_event = {
+  id = gt.100
+	hide_window = yes
+	is_triggered_only = yes
+
+  trigger = {
+    exists = owner
+    owner = {
+      gt_country_can_have_wealth = no
+    }
+  }
+
+  immediate = {
+    gt_remove_planet_wealth = yes
+		every_owned_pop = {
+      gt_remove_pop_wealth = yes
+		}
+  }
+}
+
+# remove wealth from invalid pop
+pop_event = {
+  id = gt.101
+	hide_window = yes
+	is_triggered_only = yes
+
+  trigger = {
+    OR = {
+      NOT = { gt_pop_can_have_wealth = yes }
+      AND = {
+        exists = owner
+        owner = {
+          NOT = { gt_country_can_have_wealth = yes }
+        }
+      }
+    }
+  }
+
+  immediate = {
+    gt_remove_pop_wealth = yes
+  }
+}
+
+# fire staggered update events
+country_event = {
+	id = gt.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		gt_country_can_have_wealth = yes
+	}
+
+	immediate = {
+		every_owned_planet = {
+      planet_event = { id = gt.200 days = 1 random = 28 }
+		}
+	}
+}
+
+# update wealth on valid planet
+planet_event = {
+  id = gt.200
+	hide_window = yes
+	is_triggered_only = yes
+
+  trigger = {
+    exists = owner
+    owner = {
+      gt_country_can_have_wealth = yes
+    }
+  }
+
+  immediate = {
+		every_owned_pop = {
+      gt_update_pop_wealth = yes
+		}
+
+    gt_update_planet_wealth = yes
+  }
+}
