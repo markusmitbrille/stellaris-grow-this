@@ -1,0 +1,4 @@
+# This = Planet
+is_new_colony = {
+	colony_age < 60
+}
