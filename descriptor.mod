@@ -7,5 +7,5 @@ tags={
 name="Grow This: Migration"
 picture="thumbnail.png"
 supported_version="3.1.*"
-path="mod/stellaris-grow-this"
+path="C:/Users/makak/Documents/Paradox Interactive/Stellaris/mod/stellaris-grow-this"
 remote_file_id="2633685334"
