@@ -2,6 +2,7 @@
 
 @gt_wealth_criminal   = -5.0
 @gt_wealth_unemployed = -3.0
+@gt_wealth_slave      = -3.0
 @gt_wealth_worker     = -2.0
 @gt_wealth_specialist =  1.0
 @gt_wealth_ruler      =  6.0
@@ -90,6 +91,9 @@ gt_update_pop_wealth = {
 
     criminal = {
       set_variable = { which = gt_local_change value = @gt_wealth_criminal }
+    }
+    slave = {
+      set_variable = { which = gt_local_change value = @gt_wealth_slave }
     }
     worker = {
       set_variable = { which = gt_local_change value = @gt_wealth_worker }
