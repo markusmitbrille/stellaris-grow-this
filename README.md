@@ -6,10 +6,29 @@ With this mod, overall growth and pop counts will be smaller throughout the game
 
 Base (and minimum) growth is now 0.2, which can increase up to 40 on planets with large populations. Do not forget to adjust the logistic growth ceiling game setting accordingly, before starting a new game. If you want to calculate logistic growth on a planet use the following formula: growth = 0.2 x (pops - pops^2 / capacity - 1)
 
-Since base growth is now so small as to be negligible on planets with small populations, new colonies now rely heavily on migration (as it should be).
+Since base growth is now so small as to be negligible on planets with small populations, new colonies now rely heavily on migration (as it should be). I have slightly tweaked migration values:
++ Every planet now has a base tendency towards emigration. Think of this as pops always believing the grass is greener somewhere else.
++ This base tendency needs to be actively countered by providing them with excess housing and jobs, representing a thriving economy with plenty of options for your pops.
++ Colonization fever is now an essential empire building tool. Founding new colonies will more reliably result in long-term migration; colonies only lose their "newly founded" status after upgrading the basic capital building.
++ Forced growth of a specific race now induces emigration and causes some unhappiness, instead of decreasing growth.
++ Stability has not been touched and remains a source of immigration pull/emigration push. Since you always want this to be as high as possible for other reasons, it will most often just act as a small buff to immigration. But if you're weird and want unstable colonies, it can also be a tool to force emigration.
++ Immigration pull multipliers from various sources have not been touched and can help counteract base emigration push. The vanilla game does not provide any emigration push multipliers (that I know of).
 
-Migration has been overhauled as well: The main source of immigration pull and emigration push is now pop wealth, a new property of pops. Pops gain or lose wealth until they reach a certain threshold, depending on their category. Each month their wealth changes by a fraction of the difference between their current and target wealth.
-
-Then, each month, planetary wealth is calculated as the sum of all pop wealth, ranging from -100 to 100, which determines the kind and magnitude of modifier the planet gets. For wealth < 10, the planet gets the "Poor" modifier, increasing emigration push by up to 100; for wealth > 10, the planet gets the "Wealthy" modifier, increasing immigration pull by up to 100, but also reducing total natural growth by up to 100% (note that this does not affect growth from immigration).
-
-Free jobs and unemployment still affect immigration: They respectively add a 1% modifier for immigration pull or emigration push, per free job or unemployed pop.
+In numbers those values are:
++ **50** base emigration push
++ **50** immigration pull from free housing, scaling
+ + from 0% when total housing meets housing needed
+ + to 100% when total housing is 200% of the housing needed, at which point free housing equals housing needed
++ **50** emigration push from overcrowding, scaling
+ + from 0% when total housing meets housing needed
+ + to 100% when total housing is 80% of the housing needed, at which point pops stop growing, and beyond which they start declining
++ **5** immigration pull from each free job
++ **5** emigration push from each unemployed pop
++ **20** immigration pull from high stability, scaling
++ **100** emigration push from low stability, scaling
++ **100** immigration pull from being a new colony
+ + lasts until basic capital building is upgraded
++ **100** emigration push from being an old colony, scaling
+ + multiplied by the number of new colonies
+ + divided by the number of old colonies
+ + only applied when there's a new colony somewhere

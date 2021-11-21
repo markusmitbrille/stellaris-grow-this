@@ -16,7 +16,10 @@ NPop = {
 	# Logistic Carrying Capacity Cap (vanilla = 500)
 	MAX_CARRYING_CAPACITY = 1000
 	# At this ratio of new to old colonies, no further scaling of migration (vanilla = 2)
-	MAX_NEW_COLONIES_SCALE = 2
+	# NOTE: This is misleading.
+	# This define seems to act as an inverse multiplier to the old colony static modifier effects.
+	# For example, the vanilla value of 2 cuts all emigration push on old colonies in half.
+	MAX_NEW_COLONIES_SCALE = 1
 	# Required growth to make a new pop (vanilla = 100)
 	REQUIRED_POP_GROWTH = 100
 
@@ -25,9 +28,9 @@ NPop = {
 	################
 
 	# At this amount of overcrowding (required housing / actual housing), growth stops entirely (vanilla = 1.15)
-	OVERCROWDING_NO_GROWTH_THRESHOLD = 1.00
+	OVERCROWDING_NO_GROWTH_THRESHOLD = 1.25
 	# At this amount of overcrowding (required housing / actual housing), pops start declining (vanilla = 1.25)
-	OVERCROWDING_DECLINE_THRESHOLD = 1.00
+	OVERCROWDING_DECLINE_THRESHOLD = 1.25
 	# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in (vanilla = 5)
 	OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH = 0
 	# No more than this amount of pops can grow, assemble or decline in the same month (vanilla = 10)
@@ -50,4 +53,11 @@ NGameplay = {
 	LOGISTIC_CEILING_MIN = 1
 	LOGISTIC_CEILING_MAX = 250
 	LOGISTIC_CEILING_SLIDER_INTERVAL = 25
+
+	# Mult of housing to housing needs
+	# This should be the reciprocal of OVERCROWDING_NO_GROWTH_THRESHOLD so overcrowding penalties max out exactly when growth naturally stops
+	MIN_PLANET_RELATIVE_HOUSING = 0.8
+	# Mult of housing to housing needs
+	# This should be 2.0, so free housing benefits max out exactly when free housing equals housing needs (which roughly equals pop count)
+	MAX_PLANET_RELATIVE_HOUSING = 2.0
 }

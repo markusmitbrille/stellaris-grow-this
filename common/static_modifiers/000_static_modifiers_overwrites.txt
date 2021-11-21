@@ -1,0 +1,67 @@
+##########################################################################
+# Pop Modifiers
+##########################################################################
+
+planet_forced_growth = {
+	planet_emigration_push_add = 50
+	pop_happiness = -0.1
+}
+
+##########################################################################
+# Planet Modifiers
+##########################################################################
+
+# Base Planet Modifiers
+planet_base = {
+	planet_emigration_push_add = 50
+}
+
+# Scales on ratio of new to old colonies
+old_colony = {
+	planet_emigration_push_add = 100
+}
+
+# Does not scale
+new_colony = {
+	planet_immigration_pull_add = 100
+}
+
+# Housing ( 25% - 200% of required)
+# NOTE: This is misleading.
+# The defines MIN_PLANET_RELATIVE_HOUSING and MAX_PLANET_RELATIVE_HOUSING determine how much of this modifier is applied.
+# It scales from 0% applied, when total housing equals need, to 100% applied when the ratio of total housing to housing equals either define.
+# Formula for high housing: percentage_applied = (total_housing / housing_need - 1) / (MAX_PLANET_RELATIVE_HOUSING - 1)
+# Formula for low housing: percentage_applied = (1 - total_housing / housing_need) / (1 - MIN_PLANET_RELATIVE_HOUSING)
+planet_housing_no_happiness_low = {
+}
+
+planet_housing_no_happiness_high = {
+}
+
+planet_housing_low = {
+	planet_emigration_push_add = 50
+}
+
+planet_housing_high = {
+	planet_immigration_pull_add = 50
+}
+
+# Overcrowding
+planet_overcrowded = {
+	planet_stability_add = -10
+}
+
+# Per missing job
+planet_employment_no_happiness_low = {
+}
+
+planet_employment_no_happiness_high = {
+}
+
+planet_employment_low = {
+	planet_emigration_push_add = 5
+}
+
+planet_employment_high = {
+	planet_immigration_pull_add = 5
+}
