@@ -1,4 +1,4 @@
-# stellaris-grow-this
+# Grow This: Migration
 
 This mod is a population growth and migration overhaul.
 
