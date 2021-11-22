@@ -13,7 +13,7 @@ planet_forced_growth = {
 
 # Base Planet Modifiers
 planet_base = {
-	planet_emigration_push_add = 50
+	planet_emigration_push_add = 75
 }
 
 # Scales on ratio of new to old colonies
