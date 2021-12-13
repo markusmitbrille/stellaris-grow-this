@@ -16,14 +16,14 @@ Since base growth is now so small as to be negligible on planets with small popu
 
 In numbers those values are:
 
-- **50** immigration pull from free housing, scaling
+- **20** immigration pull from free housing, scaling
   - from 0% when total housing meets housing needed
   - to 100% when total housing is 200% of the housing needed, at which point free housing equals housing needed
 - **50** emigration push from overcrowding, scaling
   - from 0% when total housing meets housing needed
   - to 100% when total housing is 80% of the housing needed, at which point pops stop growing, and beyond which they start declining
 - **5** immigration pull from each free job
-- **5** emigration push from each unemployed pop
+- **10** emigration push from each unemployed pop
 - **20** immigration pull from high stability, scaling
 - **100** emigration push from low stability, scaling
 - **100** immigration pull from being a new colony
