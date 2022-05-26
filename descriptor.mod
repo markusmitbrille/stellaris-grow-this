@@ -1,4 +1,4 @@
-version = "1.1"
+version = "1.2"
 tags = {
 	"Balance"
 	"Economy"
@@ -7,6 +7,6 @@ tags = {
 
 name = "Grow This: Migration"
 picture = "thumbnail.png"
-supported_version = "3.2.*"
+supported_version = "3.4.*"
 path = "mod/stellaris-grow-this"
 remote_file_id = "2633685334"
