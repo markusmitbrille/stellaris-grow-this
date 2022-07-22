@@ -1,5 +1,4 @@
 # Grow This: Migration
-
 This mod is a population growth and migration overhaul.
 
 With this mod, overall growth and pop counts will be smaller throughout the game, but more importantly the way you grow your planets changes drastically.
