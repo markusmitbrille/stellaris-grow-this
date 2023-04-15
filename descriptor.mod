@@ -7,6 +7,6 @@ tags = {
 
 name = "Grow This: Migration"
 picture = "thumbnail.png"
-supported_version = "3.4.*"
+supported_version = "3.7.*"
 path = "mod/stellaris-grow-this"
 remote_file_id = "2633685334"
