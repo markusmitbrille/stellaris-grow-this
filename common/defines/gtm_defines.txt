@@ -1,80 +1,85 @@
 NPop = {
 
-	##########
-	# GROWTH #
-	##########
+    ##########
+    # GROWTH #
+    ##########
 
-	# Base growth rate of pops (vanilla = 3)
-	BASE_POP_GROWTH = 0.2
+    # Base growth rate of pops (vanilla = 3)
+    BASE_POP_GROWTH = 1.0
 
-	# Logistic Pop Growth Constant r (vanilla = 0.125)
-	LOGISTIC_POP_GROWTH_R = 1
+    # Logistic Pop Growth Constant r (vanilla = 0.125)
+    LOGISTIC_POP_GROWTH_R = 0.2
 
-	# Logistic Pop Growth won't lower growth to less than this percent (vanilla = 0.1)
-	LOGISTIC_POP_GROWTH_FLOOR = 1
+    # Logistic Pop Growth won't lower growth to less than this percent (vanilla = 0.1)
+    LOGISTIC_POP_GROWTH_FLOOR = 1.0
 
-	# Treat small colonies as having this many pops to avoid the very bottom of the curve (vanilla = 5)
-	LOGISTIC_POP_GROWTH_MIN_POPS = 10
+    # Treat small colonies as having this many pops to avoid the very bottom of the curve (vanilla = 5)
+    LOGISTIC_POP_GROWTH_MIN_POPS = 5
 
-	# Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity (vanilla = 0.5)
-	LOGISTIC_POP_GROWTH_LOWER_THRESHOLD = 0
+    # Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity (vanilla = 0.5)
+    LOGISTIC_POP_GROWTH_LOWER_THRESHOLD = 0
 
-	# Logistic Carrying Capacity Cap (vanilla = 500)
-	MAX_CARRYING_CAPACITY = 1000
+    # Logistic Carrying Capacity Cap (vanilla = 500)
+    MAX_CARRYING_CAPACITY = 200
 
-	# At this ratio of new to old colonies, no further scaling of migration (vanilla = 2)
-	# NOTE: This is misleading.
-	# This define seems to act as an inverse multiplier to the old colony static modifier effects.
-	# For example, the vanilla value of 2 cuts all emigration push on old colonies in half.
-	MAX_NEW_COLONIES_SCALE = 1
+    # At this ratio of new to old colonies, no further scaling of migration (vanilla = 2)
+    # NOTE: The above comment, copied from source code, is misleading.
+    # This define seems to act as an inverse multiplier to the old colony static modifier effects.
+    # For example, the vanilla value of 2 cuts all emigration push on old colonies in half.
+    MAX_NEW_COLONIES_SCALE = 1
 
-	# Required growth to make a new pop (vanilla = 100)
-	REQUIRED_POP_GROWTH = 100
+    # Required growth to make a new pop (vanilla = 100)
+    REQUIRED_POP_GROWTH = 100
 
 
-	################
-	# OVERCROWDING #
-	################
+    ################
+    # OVERCROWDING #
+    ################
 
-	# At this amount of overcrowding (required housing / actual housing), growth stops entirely (vanilla = 1.15)
-	OVERCROWDING_NO_GROWTH_THRESHOLD = 1.25
+    # At this amount of overcrowding (required housing / actual housing), growth stops entirely (vanilla = 1.15)
+    OVERCROWDING_NO_GROWTH_THRESHOLD = 1.25
 
     # At this amount of overcrowding (required housing / actual housing), pops start declining (vanilla = 1.25)
-	OVERCROWDING_DECLINE_THRESHOLD = 1.25
+    OVERCROWDING_DECLINE_THRESHOLD = 1.25
 
     # Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in (vanilla = 5)
-	OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH = 0
+    OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH = 0
 
-    # No more than this amount of pops can grow, assemble or decline in the same month (vanilla = 10)
-	MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10
+    # No more than this amount of pops can grow, assemble or decline in the same month (vanilla = 100)
+    MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 100
 
 
     #############
-	# MIGRATION #
-	#############
+    # MIGRATION #
+    #############
 
     # vanilla = 100
-	MAX_EMIGRATION_PUSH = 100
+    MAX_EMIGRATION_PUSH = 100
 
     # vanilla = 10
-	MAX_GROWTH_FROM_IMMIGRATION = 100
+    MAX_GROWTH_FROM_IMMIGRATION = 100
 
     # Fraction of base monthly growth (vanilla = 0.95)
-	MAX_GROWTH_PENALTY_FROM_EMIGRATION = 0.95
+    MAX_GROWTH_PENALTY_FROM_EMIGRATION = 0.95
 }
 
 NGameplay = {
 
-	LOGISTIC_CEILING_DEFAULT = 250
-	LOGISTIC_CEILING_MIN = 25
-	LOGISTIC_CEILING_MAX = 250
-	LOGISTIC_CEILING_SLIDER_INTERVAL = 25
+    LOGISTIC_CEILING_DEFAULT = 10
+    LOGISTIC_CEILING_MIN = 0
+    LOGISTIC_CEILING_MAX = 10
+    LOGISTIC_CEILING_SLIDER_INTERVAL = 2.5
 
-	# Mult of housing to housing needs
-	# This should be the reciprocal of OVERCROWDING_NO_GROWTH_THRESHOLD so overcrowding penalties max out exactly when growth naturally stops
-	MIN_PLANET_RELATIVE_HOUSING = 0.8
+    GROWTH_SCALE_DEFAULT = 0.10
+    GROWTH_SCALE_MIN = 0.00
+    GROWTH_SCALE_MAX = 0.25
+    GROWTH_SCALE_SLIDER_INTERVAL = 0.05
 
-	# Mult of housing to housing needs
-	# This should be 2.0, so free housing benefits max out exactly when free housing equals housing needs (which roughly equals pop count)
-	MAX_PLANET_RELATIVE_HOUSING = 2
+    # Mult of housing to housing needs
+    # This should be the reciprocal of OVERCROWDING_NO_GROWTH_THRESHOLD so overcrowding penalties max out exactly when growth naturally stops
+    MIN_PLANET_RELATIVE_HOUSING = 0.8
+
+    # Mult of housing to housing needs
+    # This should be 2.0, so free housing benefits max out exactly when free housing equals housing needs (which roughly equals pop count)
+    MAX_PLANET_RELATIVE_HOUSING = 2
 }
