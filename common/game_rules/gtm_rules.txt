@@ -1,4 +1,7 @@
 # This = Planet
 is_new_colony = {
-	has_building = building_colony_shelter
+    OR = {
+        has_building = building_colony_shelter
+        colony_age < 1800
+    }
 }
