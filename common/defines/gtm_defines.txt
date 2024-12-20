@@ -29,7 +29,7 @@ NPop = {
     MAX_NEW_COLONIES_SCALE = 1
 
     # Required growth to make a new pop (vanilla = 100)
-    REQUIRED_POP_GROWTH = 100
+    REQUIRED_POP_GROWTH = 50
 
 
     ################
