@@ -4,12 +4,12 @@ This mod is a population growth and migration overhaul.
 
 With this mod, overall growth and pop counts will be smaller throughout the game, but more importantly the way you grow your planets changes drastically.
 
-Base (and minimum) growth is now 0.2, which can increase up to 40 on planets with large populations. Do not forget to adjust the logistic growth ceiling game setting accordingly, before starting a new game. If you want to calculate logistic growth on a planet use the following formula: growth = 0.2 x (pops - pops^2 / capacity - 1)
+Base (and minimum) growth is now 1, which can increase up to 10 on planets with large populations. Do not forget to adjust the logistic growth ceiling game setting accordingly, before starting a new game. If you want to calculate logistic growth on a planet use the following formula: growth = 0.2 x (pops - pops^2 / capacity - 1)
 
 Since base growth is now so small as to be negligible on planets with small populations, new colonies now rely heavily on migration (as it should be). I have slightly tweaked migration values:
 
 - Excess housing and jobs, representing a thriving economy with plenty of opportunity for your pops, are the main way to create immigration pull; unemployment and overcrowding have the opposite effect.
-- Colonization fever is now an essential empire building tool. Founding new colonies will more reliably result in long-term migration; colonies only lose their "newly founded" status after upgrading the basic capital building.
+- Colonization fever is now an essential empire building tool. Founding new colonies will more reliably result in long-term migration; colonies only lose their "newly founded" status after a minimum of 5 years, and upgrading the basic capital building.
 - Forced growth of a specific race now induces emigration and causes some unhappiness, instead of decreasing growth.
 - Stability has not been touched and remains a source of immigration pull/emigration push. Since you always want this to be as high as possible for other reasons, it will most often just act as a small buff to immigration. But if you're weird and want unstable colonies, it can also be a tool to force emigration.
 - Immigration pull multipliers from various sources have not been touched and can help counteract emigration push. The vanilla game does not provide any emigration push multipliers (that I know of).
@@ -25,7 +25,7 @@ In numbers those values are:
 - **5** immigration pull from each free job
 - **10** emigration push from each unemployed pop
 - **100** immigration pull from being a new colony
-  - lasts until basic capital building is upgraded, or at least 5 years
+  - lasts at least 5 years, or until basic capital building is upgraded after
 - **100** emigration push from being an old colony, scaling
   - multiplied by the number of new colonies
   - divided by the number of old colonies
