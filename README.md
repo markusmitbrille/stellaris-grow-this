@@ -1,4 +1,5 @@
 # Grow This: Migration
+
 This mod is a population growth and migration overhaul.
 
 With this mod, overall growth and pop counts will be smaller throughout the game, but more importantly the way you grow your planets changes drastically.
@@ -23,10 +24,8 @@ In numbers those values are:
   - to 100% when total housing is 80% of the housing needed, at which point pops stop growing, and beyond which they start declining
 - **5** immigration pull from each free job
 - **10** emigration push from each unemployed pop
-- **20** immigration pull from high stability, scaling
-- **100** emigration push from low stability, scaling
 - **100** immigration pull from being a new colony
-  - lasts until basic capital building is upgraded
+  - lasts until basic capital building is upgraded, or at least 5 years
 - **100** emigration push from being an old colony, scaling
   - multiplied by the number of new colonies
   - divided by the number of old colonies
